@@ -16,8 +16,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    #outputs:
-      #artifact_name: python-package
+    outputs:
+      artifact_name: python-package
     
     steps:
       - name: Checkout code
@@ -36,7 +36,7 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Download artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: example_package
