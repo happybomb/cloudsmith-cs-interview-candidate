@@ -47,4 +47,4 @@ jobs:
             echo "No package found to upload"
             exit 1
           fi
-          cloudsmith push python ${{ env.CLOUDSMITH_NAMESPACE }}/${{ env.CLOUDSMITH_REPOSITORY }} example_package.zip -k ${{ secrets.CLOUDSMITH_API_KEY }} 
+          cloudsmith push python ${{ env.CLOUDSMITH_NAMESPACE }}/${{ env.CLOUDSMITH_REPOSITORY }} *.tar.gz -k ${{ secrets.CLOUDSMITH_API_KEY }} --republish
