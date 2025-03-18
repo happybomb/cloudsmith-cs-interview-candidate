@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
@@ -18,6 +18,5 @@ classifiers = [
     "Operating System :: OS Independent",
 ] 
 
-#[tool.hatch]
-#version.source = "vcs"
-#"hatch-vcs"
+[tool.hatch]
+version.source = "vcs"
