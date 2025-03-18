@@ -3,6 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
+name = "example-package"
+dynamic = ["version"]  # <-- Dynamically fetch version
 
 authors = [
   { name="Example Author", email="author@example.com" },
