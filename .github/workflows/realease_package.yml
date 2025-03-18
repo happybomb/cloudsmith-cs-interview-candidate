@@ -33,6 +33,7 @@ jobs:
         with:
           name: example_package  # Ensure this matches the artifact name in build_package.yml
           path: dist
+          run-id: ${{ github.event.workflow_run.id }}
 
       - name: List directory contents
         run: ls -la dist/
